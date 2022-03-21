@@ -19,5 +19,13 @@ namespace LaytonTemple.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Appointments()
+        {
+            var AppointmentTable = LTContext.Tours;
+            
+            return View(AppointmentTable);
+        }
     }
 }

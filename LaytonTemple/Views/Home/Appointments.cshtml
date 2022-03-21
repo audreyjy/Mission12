@@ -8,29 +8,41 @@
     made. Each appointment should have an option to Edit or Delete that appointment.
 -->
 
+@model List<Tour>
 
 <table class="table table-sm table-striped table-bordered">
-    <thead>
+    <thead class="font-weight-bold">
         <tr>
-            <th colspan="5" class="text-center">Appointments</th>
+            <td>Date</td>
+            <td>Group Name</td>
+            <td>Size of Group</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Time</td>
         </tr>
     </thead>
 
 
     <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Date</td>
+                <td>@x.GroupName</td>
+                <td>@x.GroupSize</td>
+                <td>@x.Email</td>
+                <td>@x.Phone</td>
+                <td>@x.AvailableTimes.TimeSlot</td>
 
-        <tr>
-            <th>Date</th>
-            <th>Group Name</th>
-            <th>Size of Group</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Time</th>
-        </tr>
+                <!--EDIT AND DELETE BUTTON FOR FUTURE USE-->
+
+                <!--<td><a asp-controller="Home" asp-action="Edit" asp-route-formid="@x.">Edit</a></td>
+
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-formid="@x.">Delete</a></td> -->
+
+            </tr>
+        }
         
-        <!-- add database records-->
-        <!-- add edit and delete buttons -->
-
     </tbody>
 
 </table>
