@@ -12,7 +12,7 @@ namespace LaytonTemple.Models
         [Key]
         public int TimeId { get; set; }
 
-        public string Time { get; set; }
+        public DateTime TimeSlot { get; set; }
 
     }
 }

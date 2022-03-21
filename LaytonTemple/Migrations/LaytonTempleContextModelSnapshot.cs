@@ -22,79 +22,12 @@ namespace LaytonTemple.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Time")
+                    b.Property<DateTime>("TimeSlot")
                         .HasColumnType("TEXT");
 
                     b.HasKey("TimeId");
 
                     b.ToTable("AvailableTimes");
-
-                    b.HasData(
-                        new
-                        {
-                            TimeId = 1,
-                            Time = "8:00 AM"
-                        },
-                        new
-                        {
-                            TimeId = 2,
-                            Time = "9:00 AM"
-                        },
-                        new
-                        {
-                            TimeId = 3,
-                            Time = "10:00 AM"
-                        },
-                        new
-                        {
-                            TimeId = 4,
-                            Time = "11:00 AM"
-                        },
-                        new
-                        {
-                            TimeId = 5,
-                            Time = "12:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 6,
-                            Time = "1:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 7,
-                            Time = "2:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 8,
-                            Time = "3:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 9,
-                            Time = "4:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 10,
-                            Time = "5:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 11,
-                            Time = "6:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 12,
-                            Time = "7:00 PM"
-                        },
-                        new
-                        {
-                            TimeId = 13,
-                            Time = "9:00 PM"
-                        });
                 });
 
             modelBuilder.Entity("LaytonTemple.Models.Tour", b =>
