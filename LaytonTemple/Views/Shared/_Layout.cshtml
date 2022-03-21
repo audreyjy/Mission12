@@ -10,11 +10,15 @@
 
     <div class="bg-dark text-white p-2">
         <span class="navbar-brand m-lg-2">Layton Temple Tours</span>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <!-- NEED TO CREATE TimeSlot ACTION IN HOME CONTROLLER -->
+            <!-- <a asp-controller="Home" asp-action="TimeSlot">Sign Up</a> -->
+            <a asp-controller="Home" asp-action="Appointments">Appointments</a>
+        </nav>
     </div>
 
     <div class="row m-1 p-1">
-
-
         <div class='col-9'>
             <div>
                 @RenderBody()
