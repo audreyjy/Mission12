@@ -13,9 +13,6 @@ namespace LaytonTemple.Models
         public int GroupId { get; set; }
 
         [Required]
-        public DateTime Date { get; set; }
-
-        [Required]
         public string GroupName { get; set; }
 
         [Required]

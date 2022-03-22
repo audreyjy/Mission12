@@ -26,7 +26,6 @@ namespace LaytonTemple.Migrations
                 {
                     GroupId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Date = table.Column<DateTime>(nullable: false),
                     GroupName = table.Column<string>(nullable: false),
                     GroupSize = table.Column<int>(nullable: false),
                     Email = table.Column<string>(nullable: false),

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LaytonTemple.Migrations
 {
     [DbContext(typeof(LaytonTempleContext))]
-    [Migration("20220321164244_Initial")]
+    [Migration("20220322062154_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,9 +40,6 @@ namespace LaytonTemple.Migrations
 
                     b.Property<int?>("AvailableTimesTimeId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
                         .IsRequired()

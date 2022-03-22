@@ -5,7 +5,9 @@
 
 @model LaytonTemple.Models.Tour
 
-<h2>Are you sure you want to delete your appointment for @Model.Date?</h2>
+
+
+<h2>Are you sure you want to delete your appointment for @Model ?</h2> <!-- Had to get rid of the reference to "Model.Date" because date does not exist anymore, we will need to use TimeSlot-->
 
 <form method="post" asp-controller="Home" asp-action="Delete">
     <button type="submit">Delete</button>
