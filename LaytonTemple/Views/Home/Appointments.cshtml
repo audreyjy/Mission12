@@ -32,13 +32,13 @@
                 <td>@x.GroupSize</td>
                 <td>@x.Email</td>
                 <td>@x.Phone</td>
-                <td>@x.AvailableTimes.TimeSlot</td> <!--Change name to TimeSlot-->
+                <td>@x.AvailableTimes.Time</td> <!--Change name to TimeSlot-->
 
-                <!--EDIT AND DELETE BUTTON FOR FUTURE USE-->
+                <!--EDIT BUTTON FOR FUTURE USE-->
 
-                <!--<td><a asp-controller="Home" asp-action="Edit" asp-route-formid="@x.">Edit</a></td>
+                <!--<td><a asp-controller="Home" asp-action="Edit" asp-route-formid="@x.">Edit</a></td> -->
 
-                <td><a asp-controller="Home" asp-action="Delete" asp-route-formid="@x.">Delete</a></td> -->
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-formid="@x.GroupId">Delete</a></td>
 
             </tr>
         }

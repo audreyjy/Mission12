@@ -1,0 +1,14 @@
+﻿@{
+}
+
+@ViewData["Title"] = "Delete Appointment";
+
+@model LaytonTemple.Models.Tour
+
+<h2>Are you sure you want to delete your appointment for @Model.Date?</h2>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+    <button type="submit">Delete</button>
+    <a asp-controller="Home" asp-action="Appointments" class="btn btn-primary">Cancel</a> <!-- If the user cancels the deletion request, it takes them back to the Appointments page-->
+    <input type="hidden" asp-for="GroupId" /> <!-- You need some way to link this form to the models page and Home Controller so you do a hidden field with the FormId -->
+</form>
