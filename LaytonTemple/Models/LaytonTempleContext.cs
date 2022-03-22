@@ -9,6 +9,15 @@ namespace LaytonTemple.Models
     public class LaytonTempleContext : DbContext 
     {
 
+        {
+        }
+
+        {
+        }
+
+        {
+        }
+
         public LaytonTempleContext(DbContextOptions<LaytonTempleContext> options) : base(options)
         {
         }
