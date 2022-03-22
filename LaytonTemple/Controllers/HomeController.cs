@@ -23,7 +23,7 @@ namespace LaytonTemple.Controllers
         [HttpGet]
         public IActionResult Appointments()
         {
-            var AppointmentTable = LTContext.Tours;
+            var AppointmentTable = LTContext.Tours.ToList();
             
             return View(AppointmentTable);
         }

@@ -5,21 +5,50 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
 
+    <!-- CSS for Nav Bar -->
+    <style>
+        nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: darkslategrey;
+            width: 295px;
+            border-radius: 10px;
+        }
+
+        a {
+            float: left;
+        }
+
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            a:hover {
+                background-color: #111;
+            }
+    </style>
+</head>
+<body style="background-color: aliceblue">
     <div class="bg-dark text-white p-2">
-        <span class="navbar-brand m-lg-2">Layton Temple Tours</span>
-        <nav>
+        <nav style="float:right">
             <a asp-controller="Home" asp-action="Index">Home</a>
             <!-- NEED TO CREATE TimeSlot ACTION IN HOME CONTROLLER -->
-            <!-- <a asp-controller="Home" asp-action="TimeSlot">Sign Up</a> -->
+            <a asp-controller="Home"><!--asp-action="TimeSlot"-->Sign Up</a>
             <a asp-controller="Home" asp-action="Appointments">Appointments</a>
         </nav>
+        <h1 style="text-align:left; font-size: 30px;">Layton Temple Tours</h1>
     </div>
+    
 
     <div class="row m-1 p-1">
-        <div class='col-9'>
+        <div>
             <div>
                 @RenderBody()
             </div>
