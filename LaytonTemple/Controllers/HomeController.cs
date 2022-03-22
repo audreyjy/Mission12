@@ -23,9 +23,26 @@ namespace LaytonTemple.Controllers
         [HttpGet]
         public IActionResult Appointments()
         {
-            var AppointmentTable = LTContext.Tours.ToList();
+            var Appointments = LTContext.Tours.ToList();
             
-            return View(AppointmentTable);
+            return View(Appointments);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int groupid)
+        {
+            var response_to_delete = LTContext.Tours.Single(x => x.GroupId == groupid);
+
+            return View(response_to_delete);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Tour del) //This loads the object you want to delete into the variable "del"
+        {
+            LTContext.Tours.Remove(del); //Go to blahContext, then the Movies table, then remove the record stored in the "del" variable
+            LTContext.SaveChanges();
+
+            return RedirectToAction("Appointments");
         }
     }
 }
