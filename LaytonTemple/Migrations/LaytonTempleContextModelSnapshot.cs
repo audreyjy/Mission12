@@ -28,6 +28,13 @@ namespace LaytonTemple.Migrations
                     b.HasKey("TimeId");
 
                     b.ToTable("AvailableTimes");
+
+                    b.HasData(
+                        new
+                        {
+                            TimeId = 1,
+                            TimeSlot = new DateTime(2022, 3, 23, 8, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("LaytonTemple.Models.Tour", b =>
@@ -61,6 +68,17 @@ namespace LaytonTemple.Migrations
                     b.HasIndex("AvailableTimesTimeId");
 
                     b.ToTable("Tours");
+
+                    b.HasData(
+                        new
+                        {
+                            GroupId = 1,
+                            Email = "test@test.com",
+                            GroupName = "Team 1-1",
+                            GroupSize = 3,
+                            Phone = "801-101-1010",
+                            TimeId = 1
+                        });
                 });
 
             modelBuilder.Entity("LaytonTemple.Models.Tour", b =>

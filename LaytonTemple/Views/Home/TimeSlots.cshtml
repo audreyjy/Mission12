@@ -2,9 +2,28 @@
 @{
 }
 
+@*@model TimeSlot*@
 <!-- REQUIREMENTS:
     This page will display the available times. Ignore the time slots on the
     SignUpGenius page. For our purposes, we will say the tours occur every hour on the
     hour from 8:00 am – 8:00 pm (i.e. the last tour starts at 8:00 pm.) Once the user selects a
     time, they are routed to a form that has the date info set, but allows the user to enter their info.
 -->
+
+
+@model LaytonTemple.Models.AvailableTimes;
+
+
+
+<div class="d-grid gap-2">
+    <a asp-controller="Home" asp-action="Index" asp-route-time="" asp-route-pageNum="1" class="btn btn-outline-secondary">Home</a>
+
+    @foreach (AvailableTimes AT in ViewBag.times)
+    {
+
+        <a asp-controller="Home" asp-action="Index" asp-route-time="@AT" asp-route-pageNum="1"
+           class="btn btn-success">@AT.TimeSlot</a>
+        }
+    </div>
+
+

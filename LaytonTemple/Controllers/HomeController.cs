@@ -104,5 +104,13 @@ namespace LaytonTemple.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult TimeSlots()
+        {
+            ViewBag.times = LTContext.AvailableTimes.ToList();
+
+            return View("TimeSlots");
+        }
+
     }
 }

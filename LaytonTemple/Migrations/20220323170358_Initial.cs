@@ -44,6 +44,16 @@ namespace LaytonTemple.Migrations
                         onDelete: ReferentialAction.Restrict);
                 });
 
+            migrationBuilder.InsertData(
+                table: "AvailableTimes",
+                columns: new[] { "TimeId", "TimeSlot" },
+                values: new object[] { 1, new DateTime(2022, 3, 23, 8, 0, 0, 0, DateTimeKind.Unspecified) });
+
+            migrationBuilder.InsertData(
+                table: "Tours",
+                columns: new[] { "GroupId", "AvailableTimesTimeId", "Email", "GroupName", "GroupSize", "Phone", "TimeId" },
+                values: new object[] { 1, null, "test@test.com", "Team 1-1", 3, "801-101-1010", 1 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Tours_AvailableTimesTimeId",
                 table: "Tours",
