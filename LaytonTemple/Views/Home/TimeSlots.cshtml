@@ -15,14 +15,12 @@
 
 
 
-<div class="d-grid gap-2">
-    <a asp-controller="Home" asp-action="Index" asp-route-time="" asp-route-pageNum="1" class="btn btn-outline-secondary">Home</a>
+<div class="d-grid gap-2 p-3">
 
     @foreach (AvailableTimes AT in ViewBag.times)
     {
 
-        <a asp-controller="Home" asp-action="Index" asp-route-time="@AT" asp-route-pageNum="1"
-           class="btn btn-success">@AT.TimeSlot</a>
+        <a asp-controller="Home" asp-action="SignUpForm" class="btn btn-success">@AT.TimeSlot</a>
         }
     </div>
 

@@ -48,7 +48,7 @@ namespace LaytonTemple.Controllers
         
         // SIGN UP FORM GET
         [HttpGet] 
-        public IActionResult SignUpForm()
+        public IActionResult SignUpForm(AvailableTimes time)
         {
             return View(); 
         }
