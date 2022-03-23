@@ -108,6 +108,7 @@ namespace LaytonTemple.Controllers
         public IActionResult TimeSlots()
         {
             ViewBag.times = LTContext.AvailableTimes.ToList();
+            ViewBag.filled = LTContext.Tours.ToList();
 
             return View("TimeSlots");
         }

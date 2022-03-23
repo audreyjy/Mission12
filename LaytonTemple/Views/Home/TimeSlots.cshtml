@@ -17,11 +17,24 @@
 
 <div class="d-grid gap-2 p-3">
 
+
     @foreach (AvailableTimes AT in ViewBag.times)
     {
+        @foreach (Tour t in ViewBag.filled)
+        {
+            if (AT.TimeId == t.TimeId)
+            {
+                <a  class="btn btn-secondary">@AT.TimeSlot</a>
 
-        <a asp-controller="Home" asp-action="SignUpForm" class="btn btn-success">@AT.TimeSlot</a>
+            }
+            else
+            {
+                <a asp-controller="Home" asp-action="SignUpForm" class="btn btn-success">@AT.TimeSlot</a>
+            }
         }
-    </div>
+
+        @*<a asp-controller="Home" asp-action="SignUpForm" class="btn btn-success">@AT.TimeSlot</a>*@
+    }
+</div>
 
 
