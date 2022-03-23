@@ -3,14 +3,16 @@ using System;
 using LaytonTemple.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LaytonTemple.Migrations
 {
     [DbContext(typeof(LaytonTempleContext))]
-    partial class LaytonTempleContextModelSnapshot : ModelSnapshot
+    [Migration("20220323172157_Seeding")]
+    partial class Seeding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,37 +60,37 @@ namespace LaytonTemple.Migrations
                         new
                         {
                             TimeId = 6,
-                            TimeSlot = new DateTime(2022, 3, 23, 13, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 1, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 7,
-                            TimeSlot = new DateTime(2022, 3, 23, 14, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 2, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 8,
-                            TimeSlot = new DateTime(2022, 3, 23, 15, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 3, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 9,
-                            TimeSlot = new DateTime(2022, 3, 23, 16, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 4, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 10,
-                            TimeSlot = new DateTime(2022, 3, 23, 17, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 5, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 11,
-                            TimeSlot = new DateTime(2022, 3, 23, 18, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 6, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 12,
-                            TimeSlot = new DateTime(2022, 3, 23, 19, 0, 0, 0, DateTimeKind.Unspecified)
+                            TimeSlot = new DateTime(2022, 3, 23, 7, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

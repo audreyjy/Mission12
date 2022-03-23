@@ -23,6 +23,17 @@ namespace LaytonTemple.Models
         {
 
             mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 1, TimeSlot = DateTime.ParseExact("23/03/2022 08:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 2, TimeSlot = DateTime.ParseExact("23/03/2022 09:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 3, TimeSlot = DateTime.ParseExact("23/03/2022 10:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 4, TimeSlot = DateTime.ParseExact("23/03/2022 11:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 5, TimeSlot = DateTime.ParseExact("23/03/2022 12:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 6, TimeSlot = DateTime.ParseExact("23/03/2022 13:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 7, TimeSlot = DateTime.ParseExact("23/03/2022 14:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 8, TimeSlot = DateTime.ParseExact("23/03/2022 15:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 9, TimeSlot = DateTime.ParseExact("23/03/2022 16:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 10, TimeSlot = DateTime.ParseExact("23/03/2022 17:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 11, TimeSlot = DateTime.ParseExact("23/03/2022 18:00:00", "dd/MM/yyyy HH:mm:ss", null) });
+            mb.Entity<AvailableTimes>().HasData(new AvailableTimes { TimeId = 12, TimeSlot = DateTime.ParseExact("23/03/2022 19:00:00", "dd/MM/yyyy HH:mm:ss", null) });
             //        new AvailableTimes { TimeId = 1, TimeSlot = "8:00 AM"},
             //        new AvailableTimes { TimeId = 2, TimeSlot = "9:00 AM" },
             //        new AvailableTimes { TimeId = 3, TimeSlot = "10:00 AM" },
