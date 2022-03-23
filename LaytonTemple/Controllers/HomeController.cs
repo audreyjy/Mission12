@@ -48,7 +48,7 @@ namespace LaytonTemple.Controllers
         
         // SIGN UP FORM GET
         [HttpGet] 
-        public IActionResult SignUpForm()
+        public IActionResult SignUpForm(AvailableTimes time)
         {
             return View(); 
         }
@@ -103,6 +103,15 @@ namespace LaytonTemple.Controllers
             }
         }
 
+
+        [HttpGet]
+        public IActionResult TimeSlots()
+        {
+            ViewBag.times = LTContext.AvailableTimes.ToList();
+            ViewBag.filled = LTContext.Tours.ToList();
+
+            return View("TimeSlots");
+        }
 
     }
 }
