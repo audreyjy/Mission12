@@ -8,13 +8,13 @@ namespace LaytonTemple.Models
 {
     public class AvailableTimes
     {
-        [Required]
         [Key]
+        [Required]
         public int TimeId { get; set; }
 
         public DateTime TimeSlot { get; set; }
 
-        public bool Filled { get; set; } = false; 
+        public bool Filled { get; set; } = false;
 
     }
 }

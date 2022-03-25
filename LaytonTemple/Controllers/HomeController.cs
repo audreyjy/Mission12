@@ -1,5 +1,6 @@
 ﻿using LaytonTemple.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,9 @@ namespace LaytonTemple.Controllers
         [HttpGet]
         public IActionResult Appointments()
         {
-            var Appointments = LTContext.Tours.ToList();
-            
+            var Appointments = LTContext.Tours
+                .Include(x => x.AvailableTimes)
+                .ToList();
             return View(Appointments);
         }
 
@@ -120,6 +122,7 @@ namespace LaytonTemple.Controllers
         [HttpPost]
         public IActionResult TimeSlots(AvailableTimes t)
         {
+
             var time = t.TimeId;
             return RedirectToAction("SignUpForm", time); 
         }

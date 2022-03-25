@@ -29,6 +29,6 @@ namespace LaytonTemple.Models
         [Required]
         public int TimeId { get; set; }
 
-        public virtual AvailableTimes AvailableTimes { get; set; }
+        public AvailableTimes AvailableTimes { get; set; }
     }
 }
