@@ -51,7 +51,13 @@ namespace LaytonTemple
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute(); 
+                endpoints.MapDefaultControllerRoute();
+
+                //endpoints.MapControllerRoute(
+                //    name: "time",
+                //    pattern: "{bookCategory}/Page{pageNum}",
+                //    defaults: new { Controller = "Home", action = "Index" });
+
             });
         }
     }

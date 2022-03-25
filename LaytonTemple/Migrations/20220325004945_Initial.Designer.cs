@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LaytonTemple.Migrations
 {
     [DbContext(typeof(LaytonTempleContext))]
-    [Migration("20220323172334_Seeding2")]
-    partial class Seeding2
+    [Migration("20220325004945_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,9 @@ namespace LaytonTemple.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("Filled")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("TimeSlot")
                         .HasColumnType("TEXT");
 
@@ -35,61 +38,73 @@ namespace LaytonTemple.Migrations
                         new
                         {
                             TimeId = 1,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 8, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 2,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 9, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 3,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 10, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 4,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 11, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 5,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 12, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 6,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 13, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 7,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 14, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 8,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 15, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 9,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 16, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 10,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 17, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 11,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 18, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             TimeId = 12,
+                            Filled = false,
                             TimeSlot = new DateTime(2022, 3, 23, 19, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });

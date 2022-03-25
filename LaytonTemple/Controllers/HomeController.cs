@@ -48,9 +48,10 @@ namespace LaytonTemple.Controllers
         
         // SIGN UP FORM GET
         [HttpGet] 
-        public IActionResult SignUpForm(AvailableTimes time)
+        public IActionResult SignUpForm(int timeId)
         {
-            return View(); 
+            ViewBag.TimeId = timeId; 
+            return View("SignUpForm"); 
         }
 
         // SIGN UP FORM POST
@@ -59,14 +60,17 @@ namespace LaytonTemple.Controllers
         {
             if (ModelState.IsValid)
             {
+                var time = LTContext.AvailableTimes.Single(x => x.TimeId == t.TimeId); 
+                time.Filled = true; 
+
                 LTContext.Add(t);
                 LTContext.SaveChanges();
-                return View("Index", t);
+                return RedirectToAction("Index");
             }
 
             else
             {
-                ViewBag.Categories = LTContext.AvailableTimes.ToList(); // not sure I need this? 
+                ViewBag.AvailableTimes = LTContext.AvailableTimes.ToList(); // not sure I need this? 
                 return View(t);
             }
             
@@ -111,6 +115,13 @@ namespace LaytonTemple.Controllers
             ViewBag.filled = LTContext.Tours.ToList();
 
             return View("TimeSlots");
+        }
+
+        [HttpPost]
+        public IActionResult TimeSlots(AvailableTimes t)
+        {
+            var time = t.TimeId;
+            return RedirectToAction("SignUpForm", time); 
         }
 
     }

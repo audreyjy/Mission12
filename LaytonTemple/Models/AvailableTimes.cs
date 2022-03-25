@@ -14,5 +14,7 @@ namespace LaytonTemple.Models
 
         public DateTime TimeSlot { get; set; }
 
+        public bool Filled { get; set; } = false; 
+
     }
 }
