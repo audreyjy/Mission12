@@ -50,9 +50,10 @@ namespace LaytonTemple.Controllers
         
         // SIGN UP FORM GET
         [HttpGet] 
-        public IActionResult SignUpForm(int timeId)
+        public IActionResult SignUpForm(int timeId, DateTime timeSlot)
         {
-            ViewBag.TimeId = timeId; 
+            ViewBag.TimeId = timeId;
+            ViewBag.TimeSlot = timeSlot;
             return View("SignUpForm"); 
         }
 
@@ -124,6 +125,7 @@ namespace LaytonTemple.Controllers
         {
 
             var time = t.TimeId;
+            
             return RedirectToAction("SignUpForm", time); 
         }
 

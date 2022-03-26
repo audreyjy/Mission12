@@ -14,12 +14,13 @@
     <thead class="font-weight-bold">
         <tr>
             <!--<td>Date</td>-->
-            <td>Date</td>
+            
             <td>Group Name</td>
             <td>Size of Group</td>
             <td>Email</td>
             <td>Phone</td>
-            <td>Time</td>
+            <td>Edit</td>
+            <td>Delete</td>
         </tr>
     </thead>
 
@@ -33,14 +34,14 @@
             <td>@x.GroupSize</td>
             <td>@x.Email</td>
             <td>@x.Phone</td>
-            <td>@x.AvailableTimes.TimeSlot </td>
+            @*<td>@x.AvailableTimes.TimeSlot </td>*@
 
 
             <!--EDIT BUTTON FOR FUTURE USE-->
 
             <td><a asp-controller="Home" asp-action="Edit" asp-route-groupid="@x.GroupId">Edit</a></td>
 
-            <!-- <td><a asp-controller="Home" asp-action="Delete" asp-route-formid="@x.">Delete</a></td> -->
+             <td><a asp-controller="Home" asp-action="Delete" asp-route-groupid="@x.GroupId">Delete</a></td> 
 
 
         </tr>
